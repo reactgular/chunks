@@ -5,6 +5,6 @@
         "importHelpers": true,
         "moduleResolution": "node",
         "target": "es5",
-        "outDir": "./dist/out-tsc/es5"
+        "outDir": "./lib/es5"
     }
 }

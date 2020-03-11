@@ -5,7 +5,7 @@
         "target": "esnext",
         "removeComments": false,
         "declaration": true,
-        "declarationDir": "./dist/out-tsc/typings",
+        "declarationDir": "./lib/typings",
         "emitDeclarationOnly": true
     }
 }
