@@ -5,14 +5,21 @@ node_js:
 branches:
     only:
         - master
-        - /^v\d+\.\d+(\.\d+)?(-\S*)?$/
+        - /^\d+\.\d+(\.(\d+|x))?(-\S*)?$/
 cache:
     directories:
         - node_modules
+services:
+    - xvfb
+addons:
+    chrome: stable
 before_install:
     - npm update
 install:
+    - npm set progress=false
     - npm install
+    - npm install coveralls
 script:
     - npm test
+    - npm run lint
     - npm run coveralls

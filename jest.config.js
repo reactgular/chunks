@@ -1,11 +1,19 @@
 module.exports = {
-    'collectCoverageFrom': [
-        './src/**/*.ts'
+    globals: {
+        'ts-jest': {
+            diagnostics: false
+        }
+    },
+    verbose: true,
+    bail: true,
+    collectCoverageFrom: [
+        './src/**/*.ts',
+        '!./**/index.ts'
     ],
-    'roots': [
+    roots: [
         './src'
     ],
-    'transform': {
+    transform: {
         '^.+\\.tsx?$': 'ts-jest'
     }
 };

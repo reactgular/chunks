@@ -1,29 +1,40 @@
 {
-    "compileOnSave": false,
     "compilerOptions": {
-        "baseUrl": "./",
-        "outDir": "./lib",
+        "removeComments": false,
+        "preserveConstEnums": true,
         "sourceMap": true,
-        "declaration": true,
-        "target": "es6",
-        "module": "esnext",
+        "strictFunctionTypes": true,
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "suppressImplicitAnyIndexErrors": true,
         "moduleResolution": "node",
-        "esModuleInterop": true,
+        "stripInternal": false,
+        "importHelpers": true,
+        "target": "es5",
         "lib": [
             "es5",
             "es2015",
             "dom"
         ],
-        "typeRoots": [
-            "node_modules/@types"
-        ]
+        "baseUrl": "./src",
+        "sourceRoot": "./src",
+        "paths": {
+            "@reactgular/chunks": [
+                "./"
+            ],
+            "@reactgular/chunks/*": [
+                "./*"
+            ]
+        }
     },
-    "include": [
-        "src/**/*"
-    ],
-    "exclude": [
-        "node_modules",
-        "lib",
-        "**/*.spec.ts"
+    "formatCodeOptions": {
+        "indentSize": 2,
+        "tabSize": 2
+    },
+    "files": [
+        "./src/index.ts"
     ]
 }
