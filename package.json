@@ -1,6 +1,6 @@
 {
     "name": "@reactgular/chunks",
-    "version": "1.0.1-beta.0",
+    "version": "1.0.1",
     "description": "Creates an array of elements split into groups the length of size.",
     "author": "reactgular.com",
     "homepage": "https://github.com/reactgular/chunks.git",
