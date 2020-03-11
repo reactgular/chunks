@@ -1,12 +1,13 @@
 {
     "name": "@reactgular/chunks",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Creates an array of elements split into groups the length of size.",
     "author": "reactgular.com",
     "homepage": "https://github.com/reactgular/chunks.git",
     "license": "MIT",
-    "main": "lib/index.js",
-    "types": "lib/index.d.ts",
+    "main": "lib/cjs/index.js",
+    "module": "lib/es5/index.js",
+    "typings": "lib/typings/index.d.ts",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/reactgular/chunks.git"
@@ -21,9 +22,14 @@
         "lodash"
     ],
     "scripts": {
+        "clean": "rm -rf lib",
+        "build": "npm run clean && npm run lint && npm run build:es5 && npm run build:cjs && npm run build:typings",
+        "build:es5": "tsc -p tsconfig.es5.json",
+        "build:cjs": "tsc -p tsconfig.cjs.json",
+        "build:typings": "tsc -p tsconfig.typings.json",
         "test": "jest",
+        "test:watch": "jest --watch",
         "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls",
-        "build": "rm -fr ./lib && tsc",
         "lint": "tslint -p tsconfig.json",
         "prepublishOnly": "npm test && npm run lint",
         "preversion": "npm run lint"
