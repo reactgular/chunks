@@ -5,8 +5,9 @@
     "author": "reactgular.com",
     "homepage": "https://github.com/reactgular/chunks.git",
     "license": "MIT",
-    "main": "lib/index.js",
-    "types": "lib/index.d.ts",
+    "main": "lib/cjs/index.js",
+    "module": "lib/es5/index.js",
+    "typings": "lib/typings/index.d.ts",
     "repository": {
         "type": "git",
         "url": "git+https://github.com/reactgular/chunks.git"
